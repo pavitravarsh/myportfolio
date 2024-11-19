@@ -1,0 +1,44 @@
+/* Header Container */
+.header {
+  background-color: rgb(41, 40, 40); /* Dark background for the header */
+  color: aliceblue;
+  padding: 1rem 2rem;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+/* Logo Styling */
+.logo h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* Navigation Bar */
+nav ul {
+  display: flex;
+  gap: 2rem;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: aliceblue; /* Default white color for nav links */
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 0.5rem; /* Added padding for better clickable area */
+}
+
+/* Hover Effects for Nav Links */
+nav ul li a:hover {
+  color: #f0f0f0; /* Slightly lighter color when hovered */
+  transform: scale(1.1); /* Slight scale-up effect on hover */
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8); /* Glowing text on hover */
+}

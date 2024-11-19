@@ -1,0 +1,161 @@
+.skills-section {
+  background-color: #121212;
+  color: #ffffff;
+  padding: 50px 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.8); /* Dark inner shadow for depth */
+}
+
+.skills-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #ffffff;
+  letter-spacing: 2px;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+.highlight {
+  color: #aaaf4c;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  gap: 30px; /* Space between columns */
+}
+
+.technical-skills,
+.professional-skills {
+  width: 45%;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Skill bar container */
+.skill {
+  margin-bottom: 15px;
+}
+
+.skill-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+.skill-bar {
+  background: linear-gradient(
+    135deg,
+    #aaaf4c,
+    #8a7e2e
+  ); /* Lightened gradient background */
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+}
+
+.skill-progress {
+  background: linear-gradient(
+    135deg,
+    #aaaf4c,
+    #8a7e2e
+  ); /* Completed section color */
+  height: 100%;
+  transition: width 0.4s ease;
+  box-shadow: 0 0 10px #aaaf4c, 0 0 30px #8a7e2e; /* Glow effect */
+}
+
+.skill-bar .skill-progress {
+  transition: width 0.4s ease, box-shadow 0.4s ease;
+}
+
+.skill-bar .skill-progress.incomplete {
+  background: linear-gradient(
+    135deg,
+    #4c4f52,
+    #2f3235
+  ); /* Darker gradient for incomplete part */
+  box-shadow: none; /* Remove the glow for incomplete */
+}
+
+/* Circular Progress Indicators */
+.professional-skill-circles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.circle-skill {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.circular-chart {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.circle-bg {
+  fill: none;
+  stroke: #333;
+  stroke-width: 3.8;
+}
+
+.circle {
+  fill: none;
+  stroke: #aaaf4c;
+  stroke-width: 3.8;
+  stroke-linecap: round;
+  stroke-dasharray: 0;
+  transition: stroke-dasharray 0.6s ease, stroke 0.6s ease; /* Smooth transition for circular progress */
+}
+
+.skill-percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #aaaf4c;
+  text-shadow: 0 0 10px #aaaf4c, 0 0 20px #8a7e2e;
+}
+
+.skill-name {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+@media (max-width: 768px) {
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .technical-skills,
+  .professional-skills {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+}

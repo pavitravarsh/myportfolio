@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+.profile-section {
+  background-color: #121212;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 81vh;
+  padding: 0 20px;
+}
+
+/* Adjust text size and boldness */
+.profile-info p {
+  font-size: 1.25rem;
+  font-weight: bold; /* Made the text bold */
+  line-height: 1.5;
+  background-color: #aaaf4c;
+  padding: 10px;
+}
+
+.profile-container {
+  display: flex;
+  justify-content: flex-start; /* Align the content to the left */
+  align-items: flex-start; /* Align the profile image and content to the top */
+  gap: 50px;
+}
+
+.profile-image img {
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border: 5px solid #aaaf4c; /* Green border */
+  box-shadow: 0 4px 8px #aaaf4c; /* Shadow effect for depth */
+}
+
+.profile-info {
+  flex: 2; /* Ensure profile content takes up more space */
+  text-align: left; /* Align the text to the left */
+}
+
+.profile-info h1 {
+  max-width: 500px;
+  color: #aaaf4c;
+  font-size: 2.5rem; /* Larger font size for name */
+  font-weight: bold; /* Make name bold */
+  margin-top: 10px; /* Space between name and other text */
+  flex: 2;
+}
+
+.profile-info h2 {
+  max-width: 500px;
+  font-size: 2rem; /* Larger font size for name */
+  font-weight: bold; /* Make name bold */
+  margin-top: 10px; /* Space between name and other text */
+  flex: 2;
+}
+
+.profile-info p {
+  font-size: 1.2rem;
+  margin: 15px 0;
+}
+
+.cta-buttons .btn-download,
+.cta-buttons .btn-contact {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 12px 30px;
+  margin: 10px;
+  font-size: 1.1rem;
+  color: #fff;
+  position: relative;
+  border: none;
+  border-radius: 30px;
+  display: inline-block;
+  transition: all 0.3s ease;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+/* Hover effect */
+.cta-buttons .btn-download:hover,
+.cta-buttons .btn-contact:hover {
+  letter-spacing: 3px; /* Increase letter spacing on hover */
+}
+
+/* Button focus effect */
+.cta-buttons .btn-contact {
+  background-color: #aaaf4c; /* Tomato color for Contact button */
+}
+
+.cta-buttons .btn-download {
+  background-color: #aaaf4c; /* Green color for Download button */
+}
+
+.profile-info .social-icons {
+  display: flex;
+  gap: 15px; /* Adjust space between social icons */
+}
+
+.social-icons a {
+  padding: 10px 10px;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 1.5rem;
+}
+
+.social-icons a:hover {
+  color: #aaaf4c; /* Change icon color on hover */
+}
+
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* Reduce the gap when stacked */
+  }
+
+  .profile-image img {
+    width: 200px;
+    height: 200px; /* Adjust the image size */
+  }
+
+  .profile-info h1 {
+    font-size: 2rem; /* Adjust font size for the name */
+  }
+
+  .profile-info p {
+    font-size: 1.1rem; /* Slightly reduce paragraph size */
+  }
+
+  .cta-buttons .btn-download,
+  .cta-buttons .btn-contact {
+    padding: 10px 25px; /* Reduce button size */
+    font-size: 1rem; /* Adjust button font size */
+  }
+
+  .social-icons a {
+    font-size: 1.3rem; /* Reduce icon size */
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Reduce the gap further */
+  }
+
+  .profile-image img {
+    width: 150px;
+    height: 150px; /* Adjust image size for mobile */
+  }
+
+  .profile-info h1 {
+    font-size: 1.8rem; /* Adjust name font size for mobile */
+  }
+
+  .profile-info p {
+    font-size: 1rem; /* Adjust paragraph size */
+  }
+
+  .cta-buttons .btn-download,
+  .cta-buttons .btn-contact {
+    padding: 8px 20px; /* Further reduce button size */
+    font-size: 0.9rem; /* Adjust font size for buttons */
+  }
+
+  .social-icons a {
+    font-size: 1.2rem; /* Reduce icon size for mobile */
+  }
+}
+
+/* animation*/
+
+.profile-container .water-drop-grid {
+  position: absolute;
+  top: 50px; /* Adjust this value based on your navbar height */
+  right: 0;
+  width: 300px; /* Adjust size as needed */
+  height: 300px; /* Adjust size as needed */
+  opacity: 0.2; /* Reduced opacity for better integration */
+  pointer-events: none; /* Allow interaction with content above */
+  z-index: 1; /* Ensure it's behind profile content */
+  filter: blur(
+    4px
+  ); /* Optional: Add blur effect for better background integration */
+}
+
+/* Optional: Add media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .profile-container .water-drop-grid {
+    width: 200px;
+    height: 200px;
+    top: 40px; /* Adjust for smaller screens */
+  }
+}
+
+/* Assuming this is in Profile.css */
+
+/* Profile Section Styling */
+.profile-section {
+  position: relative;
+  padding-top: 100px; /* Adjust this to give space for the navbar */
+}
+
+/* Profile container styling */
+.profile-container {
+  padding: 20px;
+  position: relative;
+  z-index: 20; /* Ensures profile content is above the grid */
+}
+
+/* Positioning the WaterDropGrid */
+.waterdropgrid-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  width: 50%; /* Adjust width as per your design */
+  height: 100vh; /* Adjust height as per your design */
+  overflow: hidden; /* Keeps the grid contained */
+}
+
+/* Optional: Adjust the WaterDropGrid size */
+.waterdropgrid-wrapper .grid {
+  max-width: 100%; /* Ensure it fills the container */
+}
+/*bigger*/
+
+/* In Profile.css or your component's CSS */
+.waterdropgrid-wrapper {
+  position: absolute;
+  top: 50;
+  right: 50;
+  z-index: 1;
+  width: 70vw; /* Change the width to a larger value (adjust as needed) */
+  height: 80vh; /* Full height of the viewport */
+  overflow: hidden; /* Keeps the grid contained */
+}

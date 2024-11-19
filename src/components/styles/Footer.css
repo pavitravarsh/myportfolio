@@ -1,0 +1,26 @@
+/* Footer Styling */
+.footer {
+  background-color: rgb(41, 40, 40);
+  color: #ffffff;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  position: relative;
+}
+
+/* Back to Top Button */
+.back-to-top {
+  background-color: #aaaf4c;
+  color: rgb(41, 40, 40);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-to-top:hover {
+  background-color: #ffffff;
+  transform: scale(1.1);
+}

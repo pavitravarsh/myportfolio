@@ -1,0 +1,122 @@
+.about-section {
+  background-color: #121212;
+  color: #ffffff;
+  padding: 50px 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+.highlight {
+  color: #aaaf4c; /* Highlight color */
+}
+
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-image {
+  display: flex; /* Use Flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100%; /* Ensure the container takes full height of the parent */
+  width: 100%; /* Ensure the container takes full width of the parent */
+}
+
+.about-image img {
+  width: 180px;
+  height: 180px;
+  border-radius: 100px;
+  margin-bottom: 20px;
+  object-fit: cover;
+  border: 2px solid #aaaf4c;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+.about-info {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+.info-card {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 45%;
+  margin: 0 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.info-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #aaaf4c; /* Icon color */
+}
+
+.info-content h3 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.education-item {
+  font-size: 1rem;
+  color: #bbbbbb;
+  margin: 5px 0;
+}
+
+.school-name,
+.university-name {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.education-item:hover {
+  color: #aaaf4c; /* Highlight color on hover */
+  cursor: pointer;
+}
+
+.about-description {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #bbbbbb;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
