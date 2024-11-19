@@ -11,6 +11,10 @@ const Profile = () => {
       <div className="absolute top-0 right-0 z-10">
         <WaterDropGrid />
       </div>
+      <div className="scroll-indicator">
+        <p>Tap for vibes!</p>
+        <div className="scroll-line"></div> {/* Vertical line */}
+      </div>
 
       <div className="profile-container relative z-20">
         <div className="profile-image">

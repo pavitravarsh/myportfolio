@@ -22,7 +22,7 @@
 .profile-container {
   display: flex;
   justify-content: flex-start; /* Align the content to the left */
-  align-items: flex-start; /* Align the profile image and content to the top */
+  align-items: flex-start;
   gap: 50px;
 }
 
@@ -119,9 +119,8 @@
   .profile-container {
     flex-direction: column;
     align-items: center;
-    gap: 30px; /* Reduce the gap when stacked */
+    gap: 30px;
   }
-
   .profile-image img {
     width: 200px;
     height: 200px; /* Adjust the image size */
@@ -129,6 +128,10 @@
 
   .profile-info h1 {
     font-size: 2rem; /* Adjust font size for the name */
+  }
+
+  .profile-info h2 {
+    font-size: 1.6rem;
   }
 
   .profile-info p {
@@ -144,6 +147,22 @@
   .social-icons a {
     font-size: 1.3rem; /* Reduce icon size */
   }
+
+  .profile-container .water-drop-grid {
+    width: 200px;
+    height: 200px;
+    top: 40px; /* Adjust for smaller screens */
+  }
+
+  .profile-container .water-drop-grid {
+    position: absolute;
+    top: 50px; /* Adjust this value based on your navbar height */
+    right: 0;
+    width: 300px; /* Adjust size as needed */
+    height: 300px; /* Adjust size as needed */
+    pointer-events: auto; /* Allow interaction with content above */
+    z-index: 100; /* Ensure it's behind profile content */
+  }
 }
 
 /* Mobile */
@@ -151,16 +170,13 @@
   .profile-container {
     flex-direction: column;
     align-items: center;
-    gap: 20px; /* Reduce the gap further */
+    text-align: center;
+    top: 50px;
   }
 
   .profile-image img {
     width: 150px;
     height: 150px; /* Adjust image size for mobile */
-  }
-
-  .profile-info h1 {
-    font-size: 1.8rem; /* Adjust name font size for mobile */
   }
 
   .profile-info p {
@@ -186,24 +202,9 @@
   right: 0;
   width: 300px; /* Adjust size as needed */
   height: 300px; /* Adjust size as needed */
-  opacity: 0.2; /* Reduced opacity for better integration */
-  pointer-events: none; /* Allow interaction with content above */
-  z-index: 1; /* Ensure it's behind profile content */
-  filter: blur(
-    4px
-  ); /* Optional: Add blur effect for better background integration */
+  pointer-events: auto; /* Allow interaction with content above */
+  z-index: 100; /* Ensure it's behind profile content */
 }
-
-/* Optional: Add media queries for responsiveness */
-@media screen and (max-width: 768px) {
-  .profile-container .water-drop-grid {
-    width: 200px;
-    height: 200px;
-    top: 40px; /* Adjust for smaller screens */
-  }
-}
-
-/* Assuming this is in Profile.css */
 
 /* Profile Section Styling */
 .profile-section {
@@ -220,12 +221,11 @@
 
 /* Positioning the WaterDropGrid */
 .waterdropgrid-wrapper {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 10;
-  width: 50%; /* Adjust width as per your design */
-  height: 100vh; /* Adjust height as per your design */
+  top: 50px;
+  right: 50px;
+  z-index: 1;
+  width: 50vw; /* Adjust width as per your design */
+  height: 50vh; /* Adjust height as per your design */
   overflow: hidden; /* Keeps the grid contained */
 }
 
@@ -240,8 +240,62 @@
   position: absolute;
   top: 50;
   right: 50;
-  z-index: 1;
+  z-index: 100;
   width: 70vw; /* Change the width to a larger value (adjust as needed) */
   height: 80vh; /* Full height of the viewport */
   overflow: hidden; /* Keeps the grid contained */
+}
+
+.scroll-indicator {
+  position: absolute;
+  top: 10%; /* Position it vertically centered */
+  right: 10px; /* Position it on the right */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center the items */
+  z-index: 20;
+  pointer-events: auto;
+}
+
+.scroll-indicator p {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #aaaf4c; /* Your green color */
+  text-transform: uppercase;
+  margin-bottom: 10px; /* Space between text and arrow */
+  writing-mode: vertical-lr;
+}
+
+.scroll-line {
+  width: 4px; /* Width of the vertical line */
+  height: 90px; /* Height of the line (adjust as needed) */
+  background-color: #aaaf4c; /* Green line color */
+}
+
+/* Bouncing animation for arrow */
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-5px);
+  }
+  60% {
+    transform: translateY(-2px);
+  }
+}
+
+/* Optional animation for bouncing arrow */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
 }
