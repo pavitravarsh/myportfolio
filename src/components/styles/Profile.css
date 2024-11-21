@@ -3,11 +3,12 @@
 .profile-section {
   background-color: #121212;
   color: white;
+  position: relative;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 81vh;
-  padding: 0 20px;
+  justify-content: center;
+  height: 100vh; /* Full viewport height */
 }
 
 /* Adjust text size and boldness */
@@ -24,6 +25,7 @@
   justify-content: flex-start; /* Align the content to the left */
   align-items: flex-start;
   gap: 50px;
+  z-index: 10;
 }
 
 .profile-image img {
@@ -221,12 +223,14 @@
 
 /* Positioning the WaterDropGrid */
 .waterdropgrid-wrapper {
+  position: absolute;
   top: 50px;
   right: 50px;
-  z-index: 1;
+  z-index: -1;
   width: 50vw; /* Adjust width as per your design */
   height: 50vh; /* Adjust height as per your design */
   overflow: hidden; /* Keeps the grid contained */
+  pointer-events: none;
 }
 
 /* Optional: Adjust the WaterDropGrid size */

@@ -1,7 +1,6 @@
 import React from "react";
 import Typewriter from "./Typewriter"; // Import the Typewriter component
 import "./styles/Profile.css"; // Assuming CSS is located here
-import anime from "animejs/lib/anime.es.js";
 import WaterDropGrid from "./WaterDropGridVideo"; // Make sure WaterDropGrid is imported
 
 const Profile = () => {
