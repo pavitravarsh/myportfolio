@@ -231,6 +231,7 @@
   height: 50vh; /* Adjust height as per your design */
   overflow: hidden; /* Keeps the grid contained */
   pointer-events: none;
+  clip-path: inset(0 0 0 100px); /* Adjust values to hide specific areas */
 }
 
 /* Optional: Adjust the WaterDropGrid size */

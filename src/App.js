@@ -6,7 +6,6 @@ import Footer from "./components/Footer";
 import Skills from "./components/Skills";
 import About from "./components/About";
 import "./App.css";
-import WaterDropGrid from "./components/WaterDropGridVideo";
 import Projects from "./components/Projects";
 
 function App() {
@@ -33,7 +32,6 @@ function App() {
               <>
                 <Skills />
                 <Footer />
-                <WaterDropGrid />
               </>
             }
           />
@@ -50,6 +48,7 @@ function App() {
             path="/Projects"
             element={
               <>
+                <p_name />
                 <Projects />
                 <Footer />
               </>

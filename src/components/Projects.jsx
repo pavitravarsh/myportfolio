@@ -29,13 +29,22 @@ const projects = [
 ];
 
 const Projects = () => {
+  const splitText = (text) => {
+    return text.split("").map((char, index) => (
+      <span key={index} className="hoverLetter">
+        {char}
+      </span>
+    ));
+  };
+
   return (
     <section className="projects-section">
-      <h2 className="projects-title">Projects</h2>
+      <h2 className="hoverText">{splitText("Projects")}</h2>
       <div className="projects-container">
+        {/* Projects */}
         {projects.map((project, index) => (
           <div key={index} className="project-card">
-            <h3 className="project-title">{project.title}</h3>
+            <h3 className="project-title">{splitText(project.title)}</h3>
             <p className="project-technologies">
               <strong>Technologies:</strong> {project.technologies}
             </p>
