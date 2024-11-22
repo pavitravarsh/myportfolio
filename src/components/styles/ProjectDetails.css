@@ -1,0 +1,20 @@
+.project-details-section {
+  padding: 2rem;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 3rem auto;
+}
+
+.project-details-section h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.project-details-section p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+}

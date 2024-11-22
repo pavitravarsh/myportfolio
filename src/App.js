@@ -7,6 +7,7 @@ import Skills from "./components/Skills";
 import About from "./components/About";
 import "./App.css";
 import Projects from "./components/Projects";
+import ProjectDetails from "./components/ProjectDetails";
 
 function App() {
   return (
@@ -48,12 +49,12 @@ function App() {
             path="/Projects"
             element={
               <>
-                <p_name />
                 <Projects />
                 <Footer />
               </>
             }
           />
+          <Route path="/project/:id" element={<ProjectDetails />} />
         </Routes>
       </Router>
     </div>

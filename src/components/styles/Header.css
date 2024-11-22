@@ -1,13 +1,15 @@
 /* Header Container */
 .header {
-  background-color: rgb(41, 40, 40); /* Dark background for the header */
-  color: aliceblue;
+  background-color: #282a20;
+  color: #f0f0d8;
   padding: 1rem 2rem;
   width: 100%;
   z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
 }
 
@@ -15,12 +17,32 @@
 .logo h1 {
   font-size: 2.5rem;
   font-weight: bold;
+  color: #aaaf4c;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.logo h1:hover {
+  color: #d5da7d;
+  text-shadow: 0 0 12px rgba(213, 218, 125, 0.8);
+}
+
+/* Hamburger Icon */
+.menu-btn {
+  display: none; /* Hide by default */
+  font-size: 2rem;
+  cursor: pointer;
+  color: #f0f0d8;
 }
 
 /* Navigation Bar */
 nav ul {
   display: flex;
   gap: 2rem;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li {
@@ -30,15 +52,124 @@ nav ul li {
 nav ul li a {
   font-size: 1.1rem;
   font-weight: 500;
-  color: aliceblue; /* Default white color for nav links */
+  color: #f0f0d8;
   text-decoration: none;
-  transition: all 0.3s ease;
-  padding: 0.5rem; /* Added padding for better clickable area */
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+  padding: 0.5rem;
 }
 
 /* Hover Effects for Nav Links */
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #aaaf4c;
+  transition: all 0.3s ease;
+}
+
 nav ul li a:hover {
-  color: #f0f0f0; /* Slightly lighter color when hovered */
-  transform: scale(1.1); /* Slight scale-up effect on hover */
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8); /* Glowing text on hover */
+  color: #aaaf4c;
+  transform: scale(1.1);
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Media Query for Mobile Screens */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .logo h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Show Hamburger Menu only on mobile */
+  .menu-btn {
+    display: block;
+    position: absolute;
+    right: 20px; /* Position the icon to the right corner */
+    top: 20px; /* Align with the top */
+  }
+
+  /* Theme toggle button on mobile */
+  .theme-toggle {
+    position: relative;
+    bottom: 15px;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-top: 1rem; /* Keep it spaced from the logo */
+  }
+
+  nav ul {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 1rem;
+    z-index: -1;
+  }
+
+  nav ul li {
+    text-align: center;
+    margin: 1rem 0;
+  }
+
+  /* Mobile menu active state */
+  .nav.active ul {
+    display: flex;
+  }
+}
+
+/* Hide hamburger icon in full screen */
+@media (min-width: 769px) {
+  .menu-btn {
+    display: none;
+  }
+}
+
+/* Logo Section */
+.logo {
+  display: flex;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 30px;
+  margin-left: 10px;
+  cursor: pointer;
+  color: inherit;
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.2);
+}
+
+/* Root styles for both themes */
+:root {
+  --background-color: #1e1e1e;
+  --text-color: #fff;
+}
+
+/* Dark theme styles */
+body.dark-theme {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Light theme styles */
+body.light-theme {
+  --background-color: #fff;
+  --text-color: #000;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
