@@ -155,21 +155,38 @@ nav ul li a:hover::after {
 }
 
 /* Root styles for both themes */
-:root {
-  --background-color: #1e1e1e;
-  --text-color: #fff;
+
+.header.dark {
+  background-color: #333;
+  color: #aaaf4c;
 }
 
-/* Dark theme styles */
-body.dark-theme {
-  background-color: var(--background-color);
-  color: var(--text-color);
+/* Light Mode Header Styling */
+.header.light {
+  background-color: #eae3d2;
+  color: #9c6644;
 }
 
-/* Light theme styles */
-body.light-theme {
-  --background-color: #fff;
-  --text-color: #000;
-  background-color: var(--background-color);
-  color: var(--text-color);
+/* Light Mode Logo Styling */
+.header.light .logo h1 {
+  color: #9c6644;
+}
+
+.header.light .logo h1:hover {
+  color: #ca997b;
+  text-shadow: 0 0 12px #ca997b;
+}
+
+/* Light Mode Navigation Links */
+.header.light nav ul li a {
+  color: #9c6644;
+}
+
+.header.light nav ul li a:hover {
+  color: #ba8b6f;
+}
+
+/* Light Mode Hamburger Icon */
+.header.light .menu-btn {
+  color: #9c6644;
 }

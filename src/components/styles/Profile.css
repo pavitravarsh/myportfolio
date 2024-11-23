@@ -304,3 +304,148 @@
     transform: translateY(10px);
   }
 }
+
+/* Light Mode Styles */
+.light .profile-section {
+  background-color: #edece0; /* Light background for profile section */
+  color: #121212; /* Dark text color */
+}
+
+.light .profile-image img {
+  border: 5px solid #9c6644; /* Blue border for light mode */
+  box-shadow: 0 4px 8px rgba(248, 255, 112, 0.2);
+}
+
+.light .profile-info h1,
+.light .profile-info h2 {
+  color: #9c6644; /* Blue text for headings */
+}
+
+.light .cta-buttons .btn-download,
+.light .cta-buttons .btn-contact {
+  background-color: #9c6644; /* Blue buttons for light mode */
+  color: #ffffff; /* White text */
+}
+
+.light .cta-buttons .btn-download:hover,
+.light .cta-buttons .btn-contact:hover {
+  letter-spacing: 3px; /* Increase letter spacing on hover */
+}
+
+.light .social-icons a {
+  color: #9c6644; /* Dark color for social icons */
+}
+
+.light .social-icons a:hover {
+  color: #9c6644; /* Blue color on hover */
+}
+
+.light .waterdropgrid-wrapper {
+  background-color: #9c6644;
+}
+
+.light .scroll-indicator p {
+  color: #9c6644; /* Blue text for scroll indicator */
+}
+
+.light .scroll-line {
+  background-color: #9c6644; /* Blue color for scroll line */
+}
+
+/* Light Mode for profile-info p */
+.light .profile-info p {
+  color: #edece0; /* Dark text color for readability */
+  background-color: #9c6644; /* Light background for paragraph */
+  padding: 10px; /* Add some padding for better readability */
+  font-size: 1.2rem; /* Adjust font size if necessary */
+  font-weight: normal; /* Set to normal weight for light mode */
+  line-height: 1.6; /* Adjust line height for better spacing */
+}
+
+/* Light Mode for profile-info h2 */
+.light .profile-info h2 {
+  color: #9c6644;
+  font-size: 2rem; /* Adjust font size for the heading */
+  font-weight: bold; /* Make the heading bold */
+  margin-top: 20px; /* Space between heading and other content */
+  text-align: left; /* Align the text to the left */
+}
+
+/* Light Mode Styling for Projects Section */
+.light .projects-section {
+  padding: 2rem;
+  background-color: #edece0; /* Light beige background */
+  color: #333; /* Dark text color for readability */
+  text-align: center;
+}
+
+/* Project Cards Container */
+.light .projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+/* Individual Project Card */
+.light .project-card {
+  background-color: #d5c1b5; /* Light brownish background */
+  border: 1px solid #edeea6; /* Light yellowish border */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+/* Title of the Project */
+.light .project-title {
+  font-size: 1.5rem;
+  color: #2c3e50; /* Dark gray for contrast */
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+/* Technologies Used */
+.light .project-technologies {
+  font-size: 1rem;
+  color: #333; /* Dark text for readability */
+  margin-bottom: 0.5rem;
+}
+
+/* Project Description */
+.light .project-description {
+  font-size: 0.95rem;
+  color: #555; /* Medium gray for description */
+  line-height: 1.5;
+}
+
+/* Hover Effects for Project Cards */
+.light .project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover Effects for Text */
+.light .hoverText {
+  transition: 0.35s font-weight, 0.35s color;
+  font-size: 55px;
+  font-weight: bold;
+  padding: 20px;
+}
+
+.light .hoverLetter:hover {
+  color: #edeea6; /* Light yellowish hover color */
+}
+
+/* To the right */
+.light .hoverLetter:hover + .hoverLetter {
+  color: #d5c1b5; /* Light brownish hover color */
+}
+
+/* To the left */
+.light .hoverLetter:has(+ .hoverLetter:hover) {
+  color: #d5c1b5; /* Light brownish hover color */
+}

@@ -8,56 +8,59 @@ import About from "./components/About";
 import "./App.css";
 import Projects from "./components/Projects";
 import ProjectDetails from "./components/ProjectDetails";
+import { ThemeProvider } from "./components/ThemeContext";
 
 function App() {
   return (
-    <div className="App">
-      <Router>
-        <Header />
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <Profile />
-                <About />
-                <Skills />
-                <Projects />
-                <Footer />
-              </>
-            }
-          />
-          <Route
-            path="/Skills"
-            element={
-              <>
-                <Skills />
-                <Footer />
-              </>
-            }
-          />
-          <Route
-            path="/About"
-            element={
-              <>
-                <About />
-                <Footer />
-              </>
-            }
-          />
-          <Route
-            path="/Projects"
-            element={
-              <>
-                <Projects />
-                <Footer />
-              </>
-            }
-          />
-          <Route path="/project/:id" element={<ProjectDetails />} />
-        </Routes>
-      </Router>
-    </div>
+    <ThemeProvider>
+      <div className="App">
+        <Router>
+          <Header />
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <Profile />
+                  <About />
+                  <Skills />
+                  <Projects />
+                  <Footer />
+                </>
+              }
+            />
+            <Route
+              path="/Skills"
+              element={
+                <>
+                  <Skills />
+                  <Footer />
+                </>
+              }
+            />
+            <Route
+              path="/About"
+              element={
+                <>
+                  <About />
+                  <Footer />
+                </>
+              }
+            />
+            <Route
+              path="/Projects"
+              element={
+                <>
+                  <Projects />
+                  <Footer />
+                </>
+              }
+            />
+            <Route path="/project/:id" element={<ProjectDetails />} />
+          </Routes>
+        </Router>
+      </div>
+    </ThemeProvider>
   );
 }
 

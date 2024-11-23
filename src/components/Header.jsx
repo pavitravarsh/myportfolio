@@ -1,28 +1,24 @@
 import React, { useState } from "react";
-import "./styles/Header.css";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
+import { useTheme } from "../components/ThemeContext"; // Import the useTheme hook
+import "./styles/Header.css"; // Ensure your styles file is correctly linked
 
 const Header = () => {
   // State to handle the toggle for mobile menu visibility
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // State for light/dark mode
-  const [theme, setTheme] = useState("dark");
+  // Access theme and toggleTheme from the ThemeContext
+  const { theme, toggleTheme } = useTheme();
 
+  // Toggle function for mobile menu
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen); // Toggle the menu visibility
-  };
-
-  const toggleTheme = () => {
-    const newTheme = theme === "dark" ? "light" : "dark";
-    setTheme(newTheme);
-    document.body.className = newTheme; // Update the body class for global theme changes
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <header className="header">
+    <header className={`header ${theme}`}>
       {/* Logo and Theme Toggle */}
       <div className="logo">
         <h1>Portfolio</h1>
@@ -41,7 +37,7 @@ const Header = () => {
       </div>
 
       {/* Navigation Menu */}
-      <nav className={`nav ${isMenuOpen ? "active" : ""}`}>
+      <nav className={`nav ${isMenuOpen ? "active" : ""} ${theme}`}>
         <ul>
           <li>
             <Link to="/" onClick={() => setIsMenuOpen(false)}>

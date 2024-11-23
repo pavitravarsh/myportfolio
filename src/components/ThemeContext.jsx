@@ -17,7 +17,13 @@ export const ThemeProvider = ({ children }) => {
     const newTheme = theme === "dark" ? "light" : "dark";
     setTheme(newTheme);
     localStorage.setItem("theme", newTheme); // Save theme preference to localStorage
+    document.body.className = newTheme; // Dynamically update body class
   };
+
+  // Set initial body class when the component mounts
+  React.useEffect(() => {
+    document.body.className = theme;
+  }, [theme]);
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>

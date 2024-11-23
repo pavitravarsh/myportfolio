@@ -190,3 +190,114 @@
     font-size: 0.9rem; /* Reduce font size */
   }
 }
+
+/* Light Mode Styling for About Section */
+.light .about-section {
+  background-color: #edece0; /* Soft light background */
+  color: #333333; /* Dark text color for readability */
+}
+
+.light .about-title {
+  color: #9c6644; /* Warm brown title color */
+}
+
+.light .highlight {
+  color: #ca997b; /* Light warm accent color */
+}
+
+.light .about-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.light .about-image img {
+  border: 2px solid #ca997b; /* Warm border for image */
+}
+
+.light .about-info {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.light .info-card {
+  background-color: #d5c1b5; /* Soft beige background for info cards */
+  color: #333333; /* Dark text color for readability */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+.light .info-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); /* Lighter hover shadow */
+}
+
+.light .info-icon {
+  color: #9c6644; /* Warm brown color for icons */
+}
+
+.light .info-content h3 {
+  color: #333333; /* Dark color for card titles */
+}
+
+.light .education-item {
+  color: #333333; /* Dark color for education items */
+}
+
+.light .education-item:hover {
+  color: #ca997b; /* Highlight color on hover */
+}
+
+.light .about-description {
+  color: #333333; /* Dark text color for description */
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* Light Mode Styling for Small Screens */
+@media (max-width: 768px) {
+  .light .about-title {
+    font-size: 2rem;
+  }
+
+  .light .about-image img {
+    width: 190px;
+    height: 190px;
+  }
+
+  .light .info-card {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .light .about-description {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+}
+
+/* Light Mode for Mobile Devices */
+@media (max-width: 480px) {
+  .light .about-title {
+    font-size: 1.8rem;
+  }
+
+  .light .about-image img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .light .info-card {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .light .about-description {
+    font-size: 0.9rem;
+    line-height: 1.3;
+  }
+
+  .light .education-item {
+    font-size: 0.9rem;
+  }
+}
