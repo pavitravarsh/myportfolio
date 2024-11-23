@@ -9,6 +9,7 @@ import "./App.css";
 import Projects from "./components/Projects";
 import ProjectDetails from "./components/ProjectDetails";
 import { ThemeProvider } from "./components/ThemeContext";
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
                   <About />
                   <Skills />
                   <Projects />
+                  <Contact />
                   <Footer />
                 </>
               }
@@ -57,6 +59,15 @@ function App() {
               }
             />
             <Route path="/project/:id" element={<ProjectDetails />} />
+            <Route
+              path="/contact"
+              element={
+                <>
+                  <Contact />
+                  <Footer />
+                </>
+              }
+            />
           </Routes>
         </Router>
       </div>

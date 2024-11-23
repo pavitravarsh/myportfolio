@@ -2,6 +2,7 @@ import React from "react";
 import Typewriter from "./Typewriter"; // Import the Typewriter component
 import "./styles/Profile.css"; // Assuming CSS is located here
 import WaterDropGrid from "./WaterDropGridVideo"; // Make sure WaterDropGrid is imported
+import { Link } from "react-router-dom";
 
 const Profile = () => {
   return (
@@ -32,16 +33,17 @@ const Profile = () => {
             digital experiences that inspire!
           </p>
           <div className="cta-buttons">
-            <button className="btn-download">Download CV</button>
-            <button className="btn-contact">Contact</button>
+            <a
+              href="/Pavitra_Varshini_CV.pdf" // Path to your CV file in the public folder
+              download="Pavitra_Varshini_CV.pdf" // This will prompt the browser to download the file
+            >
+              <button className="btn-download">Download CV</button>
+            </a>
+            <Link to="/contact">
+              <button className="btn-contact">Contact</button>
+            </Link>
           </div>
           <div className="social-icons">
-            <a href="#">
-              <i className="fab fa-facebook-f"></i>
-            </a>
-            <a href="#">
-              <i className="fab fa-twitter"></i>
-            </a>
             <a href="https://www.linkedin.com/in/pavitra-varshini-124099259/">
               <i className="fab fa-linkedin-in"></i>
             </a>

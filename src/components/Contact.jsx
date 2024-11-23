@@ -1,15 +1,17 @@
 import React from "react";
-import "./styles/Contact.css";
+import "./styles/Contact.css"; // Assuming you save the CSS as ContactSection.css
 
 const Contact = () => {
   return (
-    <section id="contact" className="contact">
+    <div className="contact-section">
       <h2>Contact Me</h2>
-      <p>Email: pavitra@example.com</p>
-      <p>
-        LinkedIn: <a href="https://www.linkedin.com">LinkedIn Profile</a>
-      </p>
-    </section>
+      <form className="contact-form">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
   );
 };
 

@@ -265,7 +265,7 @@
 .scroll-indicator p {
   font-size: 1rem;
   font-weight: bold;
-  color: #aaaf4c; /* Your green color */
+  color: #aaaf4c;
   text-transform: uppercase;
   margin-bottom: 10px; /* Space between text and arrow */
   writing-mode: vertical-lr;

@@ -1,9 +1,170 @@
-.contact {
-  padding: 40px 20px;
+/* Light Mode Contact Section */
+.light .contact-section {
+  background-color: #edece0; /* Light background */
+  color: #333; /* Dark text */
+  padding: 2rem;
   text-align: center;
-  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 2rem auto;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.contact h2 {
+.light .contact-section h2 {
   font-size: 2rem;
+  color: #9c6644; /* Accent color for headings */
+  margin-bottom: 1rem;
+}
+
+.light .contact-section p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.light .contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Input Fields and Text Area in Light Mode */
+.light .contact-form input,
+.light .contact-form textarea {
+  width: 100%;
+  max-width: 600px;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #ffffff; /* White input background */
+  color: #333; /* Dark text inside input fields */
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+.light .contact-form textarea {
+  resize: none;
+}
+
+/* Submit Button in Light Mode */
+.light .contact-form button {
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #9c6644; /* Accent color for button */
+  color: #ffffff; /* Light text for button */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.light .contact-form button:hover {
+  background-color: #9c6644; /* Slightly lighter accent color */
+  transform: scale(1.05); /* Slight enlargement on hover */
+}
+
+/* Responsive Styling for Light Mode */
+@media (max-width: 768px) {
+  .light .contact-form input,
+  .light .contact-form textarea {
+    width: 90%;
+  }
+
+  .light .contact-section {
+    padding: 1.5rem;
+  }
+
+  .light .contact-section h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Dark Mode Contact Section */
+.dark .contact-section {
+  background-color: #333 !important; /* Dark background */
+  color: #f5f5f5; /* Light text */
+  padding: 2rem;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  max-width: 800px;
+  margin: 2rem auto;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark .contact-section h2 {
+  font-size: 2rem;
+  color: #aaaf4c; /* Accent color for headings */
+  margin-bottom: 1rem;
+}
+
+.dark .contact-section p {
+  font-size: 1rem;
+  color: #cccccc; /* Muted text for paragraph */
+  margin-bottom: 1.5rem;
+}
+
+.dark .contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Input Fields and Text Area in Dark Mode */
+.dark .contact-form input,
+.dark .contact-form textarea {
+  width: 100%;
+  max-width: 600px;
+  padding: 0.8rem;
+  border: 1px solid #333; /* Subtle border */
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #555; /* Darker input background */
+  color: #ffffff; /* Light text inside input fields */
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+.dark .contact-form textarea {
+  resize: none;
+}
+
+/* Submit Button in Dark Mode */
+.dark .contact-form button {
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #aaaf4c; /* Accent color for button */
+  color: #1c1c1c; /* Dark text for contrast */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dark .contact-form button:hover {
+  background-color: #bfc270; /* Slightly lighter accent color */
+  transform: scale(1.05); /* Slight enlargement on hover */
+}
+
+/* Responsive Styling for Dark Mode */
+@media (max-width: 768px) {
+  .dark .contact-form input,
+  .dark .contact-form textarea {
+    width: 90%;
+  }
+
+  .dark .contact-section {
+    background-color: #1c1c1c;
+    padding: 1.5rem;
+  }
+
+  .dark .contact-section h2 {
+    font-size: 1.8rem;
+  }
 }

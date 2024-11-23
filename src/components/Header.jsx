@@ -60,9 +60,9 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <a href="#contact" onClick={() => setIsMenuOpen(false)}>
+            <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
