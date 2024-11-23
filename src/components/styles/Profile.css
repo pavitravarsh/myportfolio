@@ -316,9 +316,12 @@
   box-shadow: 0 4px 8px rgba(248, 255, 112, 0.2);
 }
 
-.light .profile-info h1,
-.light .profile-info h2 {
+.light .profile-info h1 {
   color: #9c6644; /* Blue text for headings */
+}
+
+.light .profile-info h2 span {
+  color: #4c4747;
 }
 
 .light .cta-buttons .btn-download,
