@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import "./styles/Projects.css";
 
@@ -50,20 +51,32 @@ const Projects = () => {
 
   return (
     <section className="projects-section">
-      <h2 className="hoverText">{splitText("Projects")}</h2>
+      <motion.h2
+        className="hoverText"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        {splitText("Projects")}
+      </motion.h2>
       <div className="projects-container">
         {projects.map((project) => (
-          <div
+          <motion.div
             key={project.id}
             className="project-card"
             onClick={() => handleCardClick(project.id)}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ duration: 0.5 }}
           >
             <h3 className="project-title">{splitText(project.title)}</h3>
             <p className="project-technologies">
               <strong>Technologies:</strong> {project.technologies}
             </p>
             <p className="project-description">{project.description}</p>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

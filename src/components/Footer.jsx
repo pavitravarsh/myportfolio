@@ -8,7 +8,7 @@ const Footer = () => {
 
   return (
     <footer className="footer">
-      <p>© 2024 Pavitra Varshini. All rights reserved.</p>
+      <p>© 2025 Pavitra Varshini. All rights reserved.</p>
       <button className="back-to-top" onClick={scrollToTop}>
         Back to Top ↑
       </button>
