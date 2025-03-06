@@ -32,6 +32,20 @@ const projects = [
     description:
       "Monitored and displayed water levels on an LCD in real-time using IoT components, showcasing efficient water management solutions.",
   },
+  {
+    id: 5,
+    title: "AI Tic-Tac-Toe",
+    technologies: "Python, AI Algorithms",
+    description:
+      "Developed an AI-powered Tic-Tac-Toe game using Minimax algorithm for intelligent decision-making and unbeatable gameplay.",
+  },
+  {
+    id: 6,
+    title: "Self-Balancing Robot",
+    technologies: "ESP32, MPU6050, Motor Driver",
+    description:
+      "Designed and built a two-wheel self-balancing robot using an ESP32 microcontroller, MPU6050 sensor, and motor driver for real-time balancing and control.",
+  },
 ];
 
 const Projects = () => {

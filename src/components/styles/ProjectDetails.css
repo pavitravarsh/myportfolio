@@ -1,20 +1,137 @@
-.project-details-section {
-  padding: 2rem;
-  text-align: center;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* 🌙 DARK MODE */
+.project-details {
   max-width: 800px;
-  margin: 3rem auto;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #1c1c1c; /* Dark contrast */
+  color: #dcdfa5; /* Light beige for readability */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
 }
 
-.project-details-section h2 {
+.project-details h1 {
   font-size: 2rem;
+  color: #aaaf4c; /* Muted green */
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.tech-stack {
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.tech-icon {
+  font-size: 1.5rem;
+  margin-left: 8px;
+}
+
+.react {
+  color: #61dafb;
+}
+
+.mongodb {
+  color: #4db33d;
+}
+
+.status-section,
+.next-steps {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #2a2a2a; /* Slightly lighter background */
+  border-left: 4px solid #aaaf4c;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.status-section h3,
+.next-steps h3 {
+  color: #edeea6;
+  font-size: 1.4rem;
+}
+
+.status-section ul,
+.next-steps ul {
+  list-style-type: none;
+  padding-left: 1rem;
+}
+
+.status-section ul li,
+.next-steps ul li {
+  margin: 0.4rem 0;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 5px;
+  transition: transform 0.2s ease;
+}
+
+.status-section ul li:hover,
+.next-steps ul li:hover {
+  transform: scale(1.02);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.project-link {
+  text-decoration: none;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0.5rem 1rem;
+  background: #aaaf4c;
+  color: #1c1c1c;
+  border-radius: 5px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.project-link:hover {
+  background: #dcdfa5;
+  transform: translateY(-3px);
+}
+
+.error-message {
+  text-align: center;
+  font-size: 1.3rem;
+  color: red;
+}
+
+/* ☀️ LIGHT MODE */
+.light .project-details {
+  background-color: #edece0;
   color: #333;
 }
 
-.project-details-section p {
-  font-size: 1.2rem;
-  color: #555;
-  line-height: 1.6;
+.light .status-section,
+.light .next-steps {
+  background-color: #d5c1b5;
+  border-left: 4px solid #edeea6;
+}
+
+.light .project-link {
+  background: #aaaf4c;
+  color: white;
+}
+
+.light .project-link:hover {
+  background: #333;
+  color: #fff;
+}
+
+/* 🎥 Video */
+.project-video {
+  display: block;
+  width: 100%;
+  max-height: 400px;
+  margin: 1.5rem auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }

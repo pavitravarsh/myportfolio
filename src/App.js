@@ -7,9 +7,9 @@ import Skills from "./components/Skills";
 import About from "./components/About";
 import "./App.css";
 import Projects from "./components/Projects";
-import ProjectDetails from "./components/ProjectDetails";
 import { ThemeProvider } from "./components/ThemeContext";
 import Contact from "./components/Contact";
+import ProjectDetails from "./components/ProjectDetails";
 
 function App() {
   return (
@@ -27,48 +27,15 @@ function App() {
                   <Skills />
                   <Projects />
                   <Contact />
-                  <Footer />
                 </>
               }
             />
-            <Route
-              path="/Skills"
-              element={
-                <>
-                  <Skills />
-                  <Footer />
-                </>
-              }
-            />
-            <Route
-              path="/About"
-              element={
-                <>
-                  <About />
-                  <Footer />
-                </>
-              }
-            />
-            <Route
-              path="/Projects"
-              element={
-                <>
-                  <Projects />
-                  <Footer />
-                </>
-              }
-            />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/projects" element={<Projects />} />
             <Route path="/project/:id" element={<ProjectDetails />} />
-            <Route
-              path="/contact"
-              element={
-                <>
-                  <Contact />
-                  <Footer />
-                </>
-              }
-            />
           </Routes>
+          <Footer />
         </Router>
       </div>
     </ThemeProvider>
