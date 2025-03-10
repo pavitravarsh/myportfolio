@@ -3,8 +3,8 @@
   max-width: 800px;
   margin: 2rem auto;
   padding: 2rem;
-  background-color: #1c1c1c; /* Dark contrast */
-  color: #dcdfa5; /* Light beige for readability */
+  background-color: #1c1c1c;
+  color: #dcdfa5;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease-in-out;
@@ -12,28 +12,83 @@
 
 .project-details h1 {
   font-size: 2rem;
-  color: #aaaf4c; /* Muted green */
+  color: #aaaf4c;
   text-align: center;
   margin-bottom: 1rem;
 }
 
 .tech-stack {
-  font-size: 1.1rem;
+  margin-bottom: 20px; /* Adds space below tech stack */
+}
+
+.tech-icons-container {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.tech-icon-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease-in-out;
+}
+
+.tech-icon-wrapper:hover {
+  transform: scale(1.1);
+}
+
+.tech-tooltip {
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
   text-align: center;
-  margin-bottom: 1rem;
+  border-radius: 4px;
+  padding: 5px;
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 12px;
+}
+
+.tech-icon-wrapper:hover .tech-tooltip {
+  visibility: visible;
+  opacity: 1;
 }
 
 .tech-icon {
-  font-size: 1.5rem;
-  margin-left: 8px;
+  font-size: 32px;
 }
 
 .react {
-  color: #61dafb;
+  color: #61dbfb;
 }
-
 .mongodb {
   color: #4db33d;
+}
+.js {
+  color: #f7df1e;
+}
+.html {
+  color: #e34c26;
+}
+.css {
+  color: #264de4;
+}
+.render {
+  color: #5468ff;
+}
+.netlify {
+  color: #00c7b7;
 }
 
 .status-section,
@@ -134,4 +189,14 @@
   margin: 1.5rem auto;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Instagram Button */
+.project-link[href*="instagram"] {
+  color: #e4405f;
+  background: #fce4ec;
+}
+
+.project-link[href*="instagram"]:hover {
+  background: #f8c8d8;
 }

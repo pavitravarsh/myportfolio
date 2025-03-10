@@ -5,14 +5,26 @@ import {
   FaDatabase,
   FaGithub,
   FaExternalLinkAlt,
+  FaJs,
+  FaHtml5,
+  FaCss3Alt,
 } from "react-icons/fa";
+import { SiRender, SiNetlify } from "react-icons/si";
 import "./styles/ProjectDetails.css";
 
 const projects = [
   {
     id: 1,
     title: "SNAIL: Full Stack Web Application",
-    technologies: ["React", "MongoDB"],
+    technologies: [
+      "React",
+      "MongoDB",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Render",
+      "Netlify",
+    ],
     goal: "To build a fully functional e-commerce platform that provides a seamless shopping experience with user authentication, product management, and a responsive UI.",
     currentStatus: {
       frontend: [
@@ -43,19 +55,24 @@ const projects = [
     },
     github: "https://github.com/pavitravarsh/e-commerse-website",
     live: "https://snailedit.netlify.app/",
-    showVideo: false, // No video for Snail
+    instagram: "https://www.instagram.com/snaileditcompany",
+    showVideo: false,
   },
-  // Other projects...
 ];
 
 const techIcons = {
   React: <FaReact title="React" className="tech-icon react" />,
   MongoDB: <FaDatabase title="MongoDB" className="tech-icon mongodb" />,
+  JavaScript: <FaJs title="JavaScript" className="tech-icon js" />,
+  HTML: <FaHtml5 title="HTML" className="tech-icon html" />,
+  CSS: <FaCss3Alt title="CSS" className="tech-icon css" />,
+  Render: <SiRender title="Render" className="tech-icon render" />,
+  Netlify: <SiNetlify title="Netlify" className="tech-icon netlify" />,
 };
 
 const ProjectDetails = () => {
   const { id } = useParams();
-  const project = projects.find((proj) => proj.id === parseInt(id));
+  const project = projects.find((proj) => proj.id === Number(id)); // FIXED
 
   if (!project) {
     return <div className="error-message">Project not found.</div>;
@@ -67,9 +84,14 @@ const ProjectDetails = () => {
 
       <div className="tech-stack">
         <strong>Tech Stack: </strong>
-        {project.technologies.map((tech, index) => (
-          <span key={index}>{techIcons[tech] || tech}</span>
-        ))}
+        <div className="tech-icons-container">
+          {project.technologies.map((tech, index) => (
+            <span key={index} className="tech-icon-wrapper">
+              {techIcons[tech] || tech}
+              <span className="tech-tooltip">{tech}</span>
+            </span>
+          ))}
+        </div>
       </div>
 
       <p>
@@ -146,6 +168,16 @@ const ProjectDetails = () => {
             className="project-link"
           >
             <FaExternalLinkAlt /> Live Project
+          </a>
+        )}
+        {project.instagram && (
+          <a
+            href={project.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="project-link"
+          >
+            <FaExternalLinkAlt /> Instagram
           </a>
         )}
       </div>
